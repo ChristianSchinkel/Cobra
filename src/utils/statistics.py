@@ -21,6 +21,7 @@ def exponential_function(x: float, a: float, b: float) -> float:
 
 def main() -> None:
     """Main function."""
+    np.random.seed(0)
 
 
 if __name__ == "__main__":
