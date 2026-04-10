@@ -1,5 +1,4 @@
 """Statistics utilities."""
-import numpy as np
 # P-value threshold for statistical significance
 # ABOVE THIS VALUE, WE FAIL TO REJECT THE NULL HYPOTHESIS
 # BELOW THIS VALUE, WE REJECT THE NULL HYPOTHESIS
@@ -21,7 +20,6 @@ def exponential_function(x: float, a: float, b: float) -> float:
 
 def main() -> None:
     """Main function."""
-    np.random.seed(0)
 
 
 if __name__ == "__main__":
