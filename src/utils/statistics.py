@@ -1,5 +1,5 @@
 """Statistics utilities."""
-
+import numpy as np
 # P-value threshold for statistical significance
 # ABOVE THIS VALUE, WE FAIL TO REJECT THE NULL HYPOTHESIS
 # BELOW THIS VALUE, WE REJECT THE NULL HYPOTHESIS
