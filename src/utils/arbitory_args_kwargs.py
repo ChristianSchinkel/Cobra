@@ -94,6 +94,71 @@ def shipping_info_1(*args, **kwargs) -> None:
     print(f"{kwargs.get('city')}, {kwargs.get('state')} {kwargs.get('zip')}")
 
 
+class Schema():
+    """ Schema class.
+    """
+    def __init__(self, **kwargs) -> None:
+        """ Constructor.
+        """
+        self.schema = kwargs
+
+    def display_schema(self) -> None:
+        """ Method to display the schema.
+        """
+        for key, value in self.schema.items():
+            print(f"{key}: {value}")
+
+    def update_schema(self, **kwargs) -> None:
+        """ Method to update the schema.
+        """
+        self.schema.update(kwargs)
+
+    def get_schema(self) -> dict:
+        """ Method to get the schema.
+        """
+        return self.schema
+
+    def delete_schema(self) -> None:
+        """ Method to delete the schema.
+        """
+        self.schema.clear()
+
+    def __str__(self) -> str:
+        """ String representation of the schema.
+        """
+        return str(self.schema)
+
+    def __repr__(self) -> str:
+        """ Official string representation of the schema.
+        """
+        return f"Schema({self.schema})"
+
+    def __len__(self) -> int:
+        """ Method to get the length of the schema.
+        """
+        return len(self.schema)
+
+    def __contains__(self, key) -> bool:
+        """ Method to check if a key is in the schema.
+        """
+        return key in self.schema
+
+    def __getitem__(self, key):
+        """ Method to get a value from the schema.
+        """
+        return self.schema[key]
+
+    def __setitem__(self, key, value) -> None:
+        """ Method to set a value in the schema.
+        """
+        self.schema[key] = value
+
+    def __delitem__(self, key) -> None:
+        """ Method to delete a key from the schema.
+        """
+        del self.schema[key]
+
+
 def main() -> None:
     """ Main function.
     """
