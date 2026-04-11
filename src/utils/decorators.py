@@ -1,8 +1,8 @@
 """ Decorators.
 """
 # Decorator = A function that extends the behavior
-#             of another functuin without modifying
-#             the base function. Pass the base funtion
+#             of another function without modifying
+#             the base function. Pass the base function
 #             as an argument to the decorator:
 
 
