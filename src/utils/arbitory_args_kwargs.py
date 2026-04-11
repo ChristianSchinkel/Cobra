@@ -215,6 +215,20 @@ def main() -> None:
                     state="CA",
                     zip="12345")
 
+    # Demonstrating the use of the Schema class:
+    class Person(Schema):
+        """ PersonSchema class that inherits from Schema.
+        """
+        def __init__(self, name, age, **kwargs) -> None:
+            """ Constructor.
+            """
+            self.name = name
+            self.age = age
+            super().__init__(**kwargs)
+
+    person = Person(name="John Doe", age=30)
+    print(f"{person}")  # Output: {'name': 'John Doe', 'age': 30}
+
 
 if __name__ == "__main__":
     main()
