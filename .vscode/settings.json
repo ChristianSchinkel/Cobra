@@ -4,6 +4,6 @@
     "mypy-type-checker.importStrategy": "fromEnvironment",
     "pylint.importStrategy": "fromEnvironment",
     "isort.importStrategy": "fromEnvironment",
-    "flake8.importStrategy": "fromEnvironment",
+    "flake8.importStrategy": "useBundled",
     "python.defaultInterpreterPath": "/Users/christian/miniconda3/envs/myenv/bin/python"
 }
