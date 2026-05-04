@@ -1,13 +1,17 @@
 #!/usr/bin/env python
 """
-Main entry point for the application.
+The Cobra application.
 """
-import cobra
+
+
+def app() -> None:
+    """Main function to run the Cobra application."""
+    print("Hello, World!")
 
 
 def main() -> None:
     """Main function to run the application."""
-    cobra.app()
+    app()
 
 
 if __name__ == "__main__":
