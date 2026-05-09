@@ -6,8 +6,38 @@
 # A 5% CHANCE OF OBSERVING THE DATA IF
 # THE NULL HYPOTHESIS IS TRUE.
 # from statistics import mean, stdev
+from enum import Enum
 import pandas as pd
 import matplotlib.pyplot as plt
+
+
+class DistributionType(Enum):
+    """Types of Data Distribution."""
+    SYMETRIC = "symetric"
+    POSITIVELY_SKEWED = "positively skewed"
+    NEGATIVELY_SKEWED = "negatively skewed"
+
+    def describe_tail_position(self) -> str:
+        """Describe the position of the left tail."""
+        if self == DistributionType.SYMETRIC:
+            return "The left tail is balanced with the right tail."
+        if self == DistributionType.POSITIVELY_SKEWED:
+            return "The long tail is on the right side."
+        if self == DistributionType.NEGATIVELY_SKEWED:
+            return "The long tail is on the left side."
+        return "Unknown distribution type."
+
+    def identify_skewness(self,
+                          mean: float,
+                          median: float,
+                          mode: float) -> DistributionType:
+        """Identify the skewness of the distribution based on mean, median, and mode."""
+        if mean == median == mode:
+            return DistributionType.SYMETRIC
+        elif mean > median:
+            return DistributionType.POSITIVELY_SKEWED
+        else:
+            return DistributionType.NEGATIVELY_SKEWED
 
 
 P_VALUE_THRESHOLD = 0.05

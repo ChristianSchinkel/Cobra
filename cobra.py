@@ -2,6 +2,7 @@
 """
 The Cobra application.
 """
+
 from src.utils.cli_ui import CLui, InputController
 
 
@@ -20,12 +21,7 @@ def app(running=True) -> None:
     # Display a welcome message
     ui.display_bordered_message("Welcome to Cobra!", border_char="#")
     # Display the main menu
-    ui.display_menu("About",
-                    "Settings",
-                    "Load Data",
-                    "Help",
-                    "Exit",
-                    title="Main Menu")
+    ui.display_menu("About", "Settings", "Load Data", "Help", "Exit", title="Main Menu")
     # Get user input for menu selection
     selection = ic.format_int("Please select an option (1-5): ")
     # Handle user selection (this is just a placeholder for actual functionality)
@@ -34,9 +30,7 @@ def app(running=True) -> None:
     load_data = "Data loading is currently unavailable."
     help_msg = "Help is currently unavailable."
     exit_msg = "Exiting Cobra. Goodbye!"
-    default = (
-        "Invalid selection. Please try again." + "\n" + exit_msg
-               )
+    default = "Invalid selection. Please try again." + "\n" + exit_msg
 
     if selection == 1:
         ui.display_bordered_message(about, border_char="#")
