@@ -303,6 +303,23 @@ def main():
     switch = Switch.ON
     print(f"Switch is: {switch.name}")
 
+    # Example of using Prefix
+    prefix = Prefix.MILLI
+    print(f"Prefix is: {prefix.name.lower()}")
+    print(f"Symbol is: {prefix.symbol()}")
+    print(f"Scaled value is: {prefix.scale(1.0)}")
+    print(f"Descaled value is: {prefix.descale(1.0)}")
+
+    # Example of using GreekLetter
+    letter = GreekLetter.PI
+    print(f"Greek letter is: {letter.name}")
+    print(f"Capitalized: {letter.kapitalize()}")
+    print(f"Lowercase: {letter.klower()}")
+
+    # Example of using GreekCountingWord
+    counting_word = GreekCountingWord.HEXA
+    print(f"Greek counting word is: {counting_word.name}")
+
 
 if __name__ == "__main__":
     main()
