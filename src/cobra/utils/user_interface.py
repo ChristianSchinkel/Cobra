@@ -1,7 +1,7 @@
 """User interface utilities for the application."""
 import subprocess
 import time
-from src.utils import os_check
+from src.cobra.utils import os_check
 
 
 class UserInterface:

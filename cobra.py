@@ -3,7 +3,7 @@
 The Cobra application.
 """
 
-from src.utils.cli_ui import CLui, InputController
+from src.cobra.cli.cli_ui import CLui, InputController
 
 
 def app(running=True) -> None:
