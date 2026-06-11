@@ -1,7 +1,7 @@
 """Person number module."""
 
 from __future__ import annotations
-from InputController import InputController
+from src.cobra.cli import InputController
 
 
 class PersonNumber:
